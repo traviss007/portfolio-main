@@ -51,7 +51,7 @@ scene.add(pointLight2);
 
 // 1. Central Hero Sculpture (Holographic Cyber Structure)
 const sculpture = new THREE.Group();
-sculpture.position.x = 2; // Offset to the right for layout balance
+sculpture.position.x = window.innerWidth > 768 ? 2 : 0; // Centered on mobile, offset on desktop
 
 const geometry = new THREE.IcosahedronGeometry(1.8, 1);
 const material = new THREE.MeshStandardMaterial({
@@ -132,6 +132,7 @@ window.addEventListener('resize', () => {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
     if(composer) composer.setSize(window.innerWidth, window.innerHeight);
+    sculpture.position.x = window.innerWidth > 768 ? 2 : 0;
 });
 
 // --- MOUSE PARALLAX ---
@@ -261,5 +262,24 @@ function animate() {
 window.addEventListener('load', () => {
     ScrollTrigger.refresh();
 });
+
+// --- MOBILE MENU FUNCTIONALITY ---
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navMenu = document.querySelector('#nav-menu');
+const navLinks = document.querySelectorAll('#nav-menu a');
+
+if (mobileMenuBtn && navMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('open');
+        navMenu.classList.toggle('active');
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuBtn.classList.remove('open');
+            navMenu.classList.remove('active');
+        });
+    });
+}
 
 animate();
