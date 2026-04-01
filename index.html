@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative Technologist & UI/UX Architect | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet" />
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.162.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.162.0/examples/jsm/"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- 3D Canvas Background -->
+    <canvas id="canvas"></canvas>
+
+    <!-- Content Overlays -->
+    <div class="content">
+        <!-- Header -->
+        <header>
+            <div class="logo">YD.</div>
+            <nav>
+                <a href="#hero">Home</a>
+                <a href="#about">Philosophy</a>
+                <a href="#works">Works</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="section" id="hero">
+            <div class="hero-content">
+                <h2 class="subtitle">Creative Technologist & UI/UX Architect</h2>
+                <h1 class="main-title">Architecting<br><span class="gradient-text">Digital</span><br>Futures.</h1>
+                <p class="hero-desc">I blend immersive web technologies with futuristic design. Welcome to the next generation of web experiences.</p>
+                <a href="#works" class="cta-btn">Enter The Grid</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section" id="about">
+            <div class="about-content glass-panel">
+                <div class="text-block">
+                    <h2>Code is design made <span class="accent">interactive.</span></h2>
+                    <p>With years of experience engineering immersive user interfaces, I specialize in forging 3D web environments that break reality. From WebGL motion to spatial design, I build the future.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selected Works Section -->
+        <section class="section" id="works">
+            <h2 class="section-title">Selected <span class="gradient-text">Works</span></h2>
+            <div class="works-grid">
+                <!-- Placeholders for project cards -->
+                <div class="work-card glass-panel group">
+                    <div class="work-card-inner">
+                        <h3>Cyber Security Platform</h3>
+                        <p>Nexus Protocol</p>
+                    </div>
+                </div>
+                <div class="work-card glass-panel group">
+                    <div class="work-card-inner">
+                        <h3>WebGL Experiences</h3>
+                        <p>Neon Void</p>
+                    </div>
+                </div>
+                <div class="work-card glass-panel group">
+                    <div class="work-card-inner">
+                        <h3>Spatial UI/UX</h3>
+                        <p>Synapse Deck</p>
+                    </div>
+                </div>
+                <div class="work-card glass-panel group">
+                    <div class="work-card-inner">
+                        <h3>Data Visualization</h3>
+                        <p>Quantum Charts</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section" id="contact">
+            <div class="contact-content">
+                <h2>Let's create something <br>unforgettable.</h2>
+                <a href="mailto:hello@example.com" class="cta-btn outline">Get In Touch</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- GSAP & Lenis via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+
+    <!-- Three.js Modules -->
+    <script type="module" src="main.js"></script>
+</body>
+</html>
